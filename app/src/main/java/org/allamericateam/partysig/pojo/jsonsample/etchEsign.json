@@ -1,0 +1,83 @@
+{
+  "query": "mutation (\n    $name: String,\n    $files: [EtchFile!],\n    $isDraft: Boolean,\n    $isTest: Boolean,\n    $signatureEmailSubject: String,\n    $signatureEmailBody: String,\n    $signatureProvider: String,\n    $signaturePageOptions: JSON,\n    $signers: [JSON!],\n    $data: JSON,\n) {\n    createEtchPacket (\n        name: $name,\n        files: $files,\n        isDraft: $isDraft,\n        isTest: $isTest,\n        signatureEmailSubject: $signatureEmailSubject,\n        signatureEmailBody: $signatureEmailBody,\n        signatureProvider: $signatureProvider,\n        signaturePageOptions: $signaturePageOptions,\n        signers: $signers,\n        data: $data\n    ) {\n        eid\n        name\n        detailsURL\n        documentGroup {\n            eid\n            status\n            signers {\n                eid\n                name\n                email\n                status\n                routingOrder\n            }\n        }\n    }\n}",
+  "variables": {
+    "name": "Important Packet of Forms",
+    "isDraft": false,
+    "isTest": true,
+    "signatureEmailSubject": "Test Packet",
+    "signatureEmailBody": "Please sign these forms as soon as possible. Thanks!",
+    "signatureProvider": "etch",
+    "signaturePageOptions": {
+      "title": "Test Packet",
+      "description": "Please soon as soon as posssible",
+      "style": {
+        "successColor": "#1985a1",
+        "infoColor": "#46494c"
+      }
+    },
+    "files": [
+      {
+        "id": "PDF_Template_IRS_W4",
+        "castEid": "XnuTZKVZg1Mljsu999od"
+      }
+    ],
+    "signers": [
+      {
+        "id": "signer1",
+        "name": "Sally Signer",
+        "email": "sally@example.com",
+        "fields": [
+          {
+            "fileId": "PDF_Template_IRS_W4",
+            "fieldId": "employeeSignature"
+          },
+          {
+            "fileId": "PDF_Template_IRS_W4",
+            "fieldId": "employeeSignatureDate"
+          }
+        ],
+        "signerType": "embedded",
+        "redirectURL": "https://www.useanvil.com/docs/api/e-signatures#redirecturl",
+        "enableEmails": [
+          "etchComplete"
+        ]
+      }
+    ],
+    "data": {
+      "payloads": {
+        "PDF_Template_IRS_W4": {
+          "textColor": "#0000CC",
+          "data": {
+            "name": "Sally Signer",
+            "address": {
+              "street1": "123 Main St #234",
+              "city": "San Francisco",
+              "state": "CA",
+              "zip": "94106",
+              "country": "US"
+            },
+            "ssn": "456454567",
+            "filingStatus": "Joint",
+            "under17Cost": 2000,
+            "otherDependentsCost": 0,
+            "totalDependentsCost": 2000,
+            "otherIncome": 0,
+            "otherDeductions": 0,
+            "extraWithholding": 0,
+            "employerName": "Awesome Co Inc",
+            "firstDateEmployment": "2021-01-12",
+            "employerEin": "897654321",
+            "headOfHousehold": true,
+            "employerAddress": {
+              "street1": "555 Market St",
+              "city": "San Francisco",
+              "state": "CA",
+              "zip": "94103",
+              "country": "US"
+            }
+          }
+        }
+      }
+    }
+  }
+}

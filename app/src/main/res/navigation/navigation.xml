@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fillPdfFragment">
+
+    <fragment
+        android:id="@+id/fillPdfFragment"
+        android:name="org.allamericateam.partysig.screens.FillPdfFragment"
+        android:label="fragment_fill_pdf"
+        tools:layout="@layout/fragment_fill_pdf" >
+        <action
+            android:id="@+id/action_fillPdfFragment_to_previewFragment"
+            app:destination="@id/previewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signatureRecipientFragment"
+        android:name="org.allamericateam.partysig.screens.SignatureRecipientFragment"
+        android:label="SignatureRecipientFragment"
+        tools:layout="@layout/fragment_signature_recipient"/>
+    <fragment
+        android:id="@+id/previewFragment"
+        android:name="org.allamericateam.partysig.screens.PreviewFragment"
+        android:label="PreviewFragment"
+        tools:layout="@layout/fragment_preview">
+        <action
+            android:id="@+id/action_previewFragment_to_fillPdfFragment"
+            app:destination="@id/fillPdfFragment" />
+    </fragment>
+</navigation>

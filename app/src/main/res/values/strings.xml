@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">PartySig</string>
+
+    <string name="graphql_base_url">https://graphql.useanvil.com</string>
+    <string name="pdf_gen_base_url">https://app.useanvil.com</string>
+    <string name="anvil_api_key">9rIg6fwuSYMFG47CieTyGxqE6ATiieof</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="street_address_label">Street Address</string>
+    <string name="street_address_2_label">Street Address 2</string>
+    <string name="city_label">City</string>
+    <string name="state_label">State</string>
+    <string name="zip_label">Zip</string>
+    <string name="submit_button_label">Submit</string>
+    <string name="signature_recipients_label">Signature Recipients</string>
+    <string name="send_signature_request_button_label">Send signature request</string>
+    <string name="fill_form_title_label">Please fill the following fields for the ADL event form</string>
+    <string name="confirm_details_label">Please confirm your details</string>
+    <string name="next_button_label">Next</string>
+    <string name="preview_button_label">Preview</string>
+
+    <string name="adl_team_name_label">ADL Team Name</string>
+
+    <string name="captain_first_name_label">Captain First Name</string>
+    <string name="captain_middle_name_label">Captain Middle Name</string>
+    <string name="captain_last_name_label">Captain Last Name</string>
+    <string name="captain_email_address_label">Captain Email Address</string>
+    <string name="captain_adl_rating_label">Captain ADL Rating</string>
+    <string name="captain_card_number_label">Captain Card Number</string>
+    <string name="captain_phone_label">Captain Phone Number</string>
+
+    <string name="player_first_name_label">Player First Name</string>
+    <string name="player_middle_name_label">Player Middle Name</string>
+    <string name="player_last_name_label">Player Last Name</string>
+    <string name="player_email_address_label">Player Email Address</string>
+    <string name="player_adl_rating_label">Player ADL Rating</string>
+    <string name="player_card_number_label">Player Card Number</string>
+    <string name="first_choice_night_label">First Choice Night</string>
+    <string name="second_choice_night_label">Second Choice Night</string>
+    <string name="player_phone_label">Player Phone</string>
+
+
+</resources>

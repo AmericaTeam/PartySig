@@ -1,0 +1,50 @@
+{
+  "data": {
+    "__schema": {
+      "queryType": {
+        "fields": [
+          {
+            "name": "cast",
+            "description": null
+          },
+          {
+            "name": "currentUser",
+            "description": null
+          },
+          {
+            "name": "etchPacket",
+            "description": null
+          },
+          {
+            "name": "etchTemplate",
+            "description": null
+          },
+          {
+            "name": "forge",
+            "description": null
+          },
+          {
+            "name": "organization",
+            "description": null
+          },
+          {
+            "name": "signer",
+            "description": null
+          },
+          {
+            "name": "submission",
+            "description": null
+          },
+          {
+            "name": "weld",
+            "description": null
+          },
+          {
+            "name": "weldData",
+            "description": null
+          }
+        ]
+      }
+    }
+  }
+}

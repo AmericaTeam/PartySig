@@ -1,0 +1,16 @@
+{
+  "name": "Anvil GraphQL Schema",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "https://graphql.useanvil.com",
+        "headers": {
+          "user-agent": "JS GraphQL",
+          "authorization" : "BASIC OXJJZzZmd3VTWU1GRzQ3Q2llVHlHeHFFNkFUaWllb2Y6"
+        },
+        "introspect": false
+      }
+    }
+  }
+}

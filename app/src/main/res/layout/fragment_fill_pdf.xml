@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            tools:context=".screens.FillPdfFragment">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:text="@string/fill_form_title_label"
+                app:layout_constraintBottom_toTopOf="@id/adlTeamNameTextField"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/adlTeamNameTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/adl_team_name_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@id/captainFirstNameTextField"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTextView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/captainFirstNameTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/captain_first_name_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@id/captainMiddleNameTextField"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/adlTeamNameTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/captainMiddleNameTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/captain_middle_name_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@id/captainLastNameTextField"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/captainFirstNameTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/captainLastNameTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/captain_last_name_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/captainMiddleNameTextField"
+                app:layout_constraintBottom_toTopOf="@id/captainAdlRatingTextField"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/captainAdlRatingTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/captain_adl_rating_label"
+                app:helperText="Rating should be between 1 and 25"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/captainLastNameTextField"
+                app:layout_constraintBottom_toTopOf="@id/captainEmailTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/captainEmailTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/captain_email_address_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@id/playerFirstNameTextField"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/captainLastNameTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/captainCardNumberTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/captain_card_number_label"
+                app:helperText="Add 16 digit card number"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/captainEmailTextField"
+                app:layout_constraintBottom_toTopOf="@id/captainPhoneTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/captainPhoneTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/captain_phone_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/captainCardNumberTextField"
+                app:layout_constraintBottom_toTopOf="@id/playerFirstNameTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/playerFirstNameTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/player_first_name_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@id/playerMiddleNameTextField"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/captainPhoneTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/playerMiddleNameTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/player_middle_name_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@id/playerLastNameTextField"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/playerFirstNameTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/playerLastNameTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/player_last_name_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/playerMiddleNameTextField"
+                app:layout_constraintBottom_toTopOf="@id/playerAdlRatingTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/playerAdlRatingTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/player_adl_rating_label"
+                app:helperText="Rating should be between 1 and 25"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/playerLastNameTextField"
+                app:layout_constraintBottom_toTopOf="@id/playerCardNumberTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/playerCardNumberTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/player_card_number_label"
+                app:helperText="Add 16 digit card number"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/playerAdlRatingTextField"
+                app:layout_constraintBottom_toTopOf="@id/playerPhoneTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/playerPhoneTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/player_phone_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/playerCardNumberTextField"
+                app:layout_constraintBottom_toTopOf="@id/playerEmailTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/playerEmailTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/player_email_address_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/playerPhoneTextField"
+                app:layout_constraintBottom_toTopOf="@id/firstChoiceNightTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstChoiceNightTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/first_choice_night_label"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/playerEmailTextField"
+                app:layout_constraintBottom_toTopOf="@id/secondChoiceNightTextField">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/secondChoiceNightTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/second_choice_night_label"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secondChoiceNightTextField"
+                app:layout_constraintBottom_toTopOf="@id/streetAddressTextField">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/streetAddressTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/street_address_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secondChoiceNightTextField"
+                app:layout_constraintBottom_toTopOf="@id/address_line_2_text_field">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/address_line_2_text_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/street_address_2_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/streetAddressTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cityTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/city_label"
+                android:paddingBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@id/stateTextField"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/address_line_2_text_field">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/stateTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/state_label"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:paddingBottom="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/zipTextField"
+                app:layout_constraintTop_toBottomOf="@id/cityTextField">
+
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/zipTextField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/zip_label"
+                android:paddingLeft="8dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/stateTextField"
+                app:layout_constraintLeft_toRightOf="@id/stateTextField"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/stateTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/next_button_label"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/zipTextField" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

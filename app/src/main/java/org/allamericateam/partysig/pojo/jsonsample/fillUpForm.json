@@ -1,0 +1,37 @@
+{
+  "title": "ADL SPRING 2020 ENTRY FORM",
+  "fontSize": 10,
+  "textColor": "#333333",
+  "data": {
+    "Location": "San Jose",
+    "firstchoice": "Elite Doubles, Sat. 4:00 p.m.",
+    "secondchoice": "BB Doubles, Fri, 2:00 p.m.",
+    "teamName": "team_name",
+    "captainName": {
+      "firstName": "Robin",
+      "mi": "W",
+      "lastName": "Smith"
+    },
+    "captainRaiting": 16,
+    "captainCardNumber": "CardNumber",
+    "captainPhoneNumber": {
+      "num": "5554443333",
+      "region": "US",
+      "baseRegion": "US"
+    },
+    "captainEmail": "testy@example.com",
+    "teammateName": {
+      "firstName": "Robin",
+      "mi": "W",
+      "lastName": "Smith"
+    },
+    "teammateRaiting": 15,
+    "teammateCardNumber": "CardNumber",
+    "teammatePhoneNumber": {
+      "num": "5554443333",
+      "region": "US",
+      "baseRegion": "US"
+    },
+    "teammateEmail": "testy@example.com"
+  }
+}
